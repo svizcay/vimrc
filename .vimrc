@@ -114,6 +114,7 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Consolas:h9:cANSI
 endif
 
 " number of colors to use
