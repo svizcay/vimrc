@@ -1,4 +1,4 @@
-" ==============================================================================
+
 " README
 " ==============================================================================
 "
@@ -87,7 +87,7 @@ set ffs=unix,dos,mac
 set laststatus=2
 
 " format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l " HasPaste function stopped working
 
 " return to last edit position when opening files
 autocmd BufReadPost *
@@ -114,7 +114,11 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set guifont=Consolas:h9:cANSI
+    if has('gui_win32')
+        set guifont=Consolas:h9:cANSI
+    else
+        set guifont=Monospace\ 10
+    endif
 endif
 
 " number of colors to use
