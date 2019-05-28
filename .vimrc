@@ -87,7 +87,9 @@ set ffs=unix,dos,mac
 set laststatus=2
 
 " format the status line
-" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l " HasPaste function stopped working
+" HasPaste function stopped working (actually no. it was missing some vim's
+" plugins
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l 
 
 " return to last edit position when opening files
 autocmd BufReadPost *
@@ -117,7 +119,7 @@ if has("gui_running")
     if has('gui_win32')
         set guifont=Consolas:h9:cANSI
     else
-        set guifont=Monospace\ 10
+        set guifont=Monospace\ 9
     endif
 endif
 

@@ -3,9 +3,9 @@
 
 ## linux
 
-* clone repo into ~/.vim folder
+* clone repo into ~/.vim folder (remember to download submodules too)
 ```
-$ git clone git@github.com:svizcay/vimrc.git ~/.vim
+$ git clone --recursive git@github.com:svizcay/vimrc.git ~/.vim
 ```
 
 * create symbolic link in home directory
